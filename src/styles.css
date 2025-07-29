@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --card-bg: #f9f9f9;
+
+  --btn-bg: #ffffff;
+  --btn-text: #222;
+  --btn-border: #222;
+}
+
+.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --card-bg: #2a2a2a;
+
+  --btn-bg: #333;
+  --btn-text: #f1f1f1;
+  --btn-border: #f1f1f1;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-container,
+.project-card,
+.skills-container,
+.contact-form {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}

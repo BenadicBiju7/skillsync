@@ -1,0 +1,9 @@
+<h2>Welocme to My Portfolio</h2>
+
+<div *ngIf="!hasDownloaded;else thankYou">
+    <button (click)="downloadResume()">Download My Resume</button>
+</div>
+
+<ng-template #thankYou>
+    <p>✅ Thanks for downloading my resume!</p>
+</ng-template>

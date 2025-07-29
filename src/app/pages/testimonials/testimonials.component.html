@@ -1,0 +1,14 @@
+<div class="testimonial-container">
+  <h2>Testimonials</h2>
+
+  <div class="testimonial-card">
+    <p class="message">“{{ testimonials[currentIndex].message }}”</p>
+    <h4 class="name">— {{ testimonials[currentIndex].name }}</h4>
+    <p class="role">{{ testimonials[currentIndex].role }}</p>
+  </div>
+
+  <div class="navigation">
+    <button (click)="prev()">&#8592; Previous</button>
+    <button (click)="next()">Next &#8594;</button>
+  </div>
+</div>
