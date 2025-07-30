@@ -11,4 +11,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'skillsync';
+isDarkMode = false;
+
+  toggleDarkMode() {
+    const htmlElement = document.documentElement;
+    htmlElement.classList.toggle('dark');
+    this.isDarkMode = htmlElement.classList.contains('dark');
+  }
+
 }

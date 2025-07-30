@@ -1,52 +1,27 @@
-<h2>Contact Me</h2>
-
-<form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      minlength="3"
-      [(ngModel)]="name"
-      #nameRef="ngModel"
-    />
-    <div class="error" *ngIf="nameRef.invalid && nameRef.touched">
-      <small *ngIf="nameRef.errors?.['required']">Name is required.</small>
-      <small *ngIf="nameRef.errors?.['minlength']">Name must be at least 3 characters.</small>
-    </div>
+<section class="bg-white dark:bg-gray-900 p-8 min-h-screen flex items-center justify-center transition-colors duration-300">
+  <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xl">
+    <form class="space-y-4">
+      <input 
+        type="text" 
+        placeholder="Name" 
+        class="w-full px-4 py-2 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500" 
+      />
+      <input 
+        type="email" 
+        placeholder="Email" 
+        class="w-full px-4 py-2 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500" 
+      />
+      <textarea 
+        placeholder="Message" 
+        rows="4" 
+        class="w-full px-4 py-2 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+      ></textarea>
+      <button 
+        type="submit" 
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition"
+      >
+        Send Message
+      </button>
+    </form>
   </div>
-
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      [(ngModel)]="email"
-      #emailRef="ngModel"
-    />
-    <div class="error" *ngIf="emailRef.invalid && emailRef.touched">
-      <small *ngIf="emailRef.errors?.['required']">Email is required.</small>
-      <small *ngIf="emailRef.errors?.['email']">Invalid email format.</small>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea
-      id="message"
-      name="message"
-      required
-      [(ngModel)]="message"
-      #messageRef="ngModel"
-    ></textarea>
-    <div class="error" *ngIf="messageRef.invalid && messageRef.touched">
-      <small *ngIf="messageRef.errors?.['required']">Message is required.</small>
-    </div>
-  </div>
-
-  <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
-</form>
+</section>

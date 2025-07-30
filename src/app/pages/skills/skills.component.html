@@ -1,13 +1,18 @@
-<h2>My Skills</h2>
+<section class="py-12 px-4 bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
+  <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">My Skills</h2>
 
-<div class="skills-container">
-    <div class="skill-card" *ngFor="let skill of skills">
-        <div class="skill-header">
-            <span>{{skill.name}}</span>
-            <span>{{skill.level}}</span>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level"></div>
-        </div>
+  <div class="max-w-3xl mx-auto space-y-6">
+    <div *ngFor="let skill of skills" class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+      <div class="flex justify-between text-gray-700 dark:text-gray-300 mb-2 font-medium">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.level }}%</span>
+      </div>
+      <div class="w-full h-3 bg-gray-300 dark:bg-gray-700 rounded-full">
+        <div
+          class="h-3 bg-green-500 rounded-full transition-all duration-500"
+          [style.width.%]="skill.level"
+        ></div>
+      </div>
     </div>
-</div>
+  </div>
+</section>

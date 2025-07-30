@@ -10,27 +10,26 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isDark=false;
+  isDarkMode = false;
 
-  constructor(){
-    const theme=localStorage.getItem('theme');
-    this.isDark=theme=='dark';
+  constructor() {
+    const theme = localStorage.getItem('theme');
+    this.isDarkMode = theme === 'dark';
     this.updateTheme();
   }
 
-  toggleTheme(){
-    this.isDark=!this.isDark;
-    localStorage.setItem('theme',this.isDark?'dark':'light');
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
     this.updateTheme();
   }
 
-  updateTheme(){
-    const classList=document.body.classList;
-    if(this.isDark){
-      classList.add('dark-theme');
-    }
-    else{
-      classList.remove('dark-theme');
+  updateTheme() {
+    const htmlElement = document.documentElement;
+    if (this.isDarkMode) {
+      htmlElement.classList.add('dark');
+    } else {
+      htmlElement.classList.remove('dark');
     }
   }
 }

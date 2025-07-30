@@ -1,9 +1,9 @@
-<h2>Welocme to My Portfolio</h2>
-
-<div *ngIf="!hasDownloaded;else thankYou">
-    <button (click)="downloadResume()">Download My Resume</button>
+<div class="px-6 py-12 min-h-screen bg-white dark:bg-gray-900 transition-all">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-6">Welcome to My Portfolio</h1>
+    
+    <a href="assets/resume.pdf" download class="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition-colors">
+      Download My Resume
+    </a>
+  </div>
 </div>
-
-<ng-template #thankYou>
-    <p>✅ Thanks for downloading my resume!</p>
-</ng-template>

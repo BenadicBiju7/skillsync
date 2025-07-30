@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/skillsync",
             "index": "src/index.html",
+            "baseHref": "/skillsync/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
