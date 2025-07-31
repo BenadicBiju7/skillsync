@@ -1,9 +1,23 @@
-<div class="px-6 py-12 min-h-screen bg-white dark:bg-gray-900 transition-all">
-  <div class="max-w-3xl mx-auto text-center">
-    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-6">Welcome to My Portfolio</h1>
-    
-    <a href="assets/resume.pdf" download class="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition-colors">
-      Download My Resume
+<section class="bg-white dark:bg-gray-900 min-h-screen flex flex-col justify-center items-center text-center p-10">
+  <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
+    Hey, I'm Benadic 👋
+  </h1>
+  <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-xl mb-6 animate-fade-in delay-200">
+    A passionate developer building interactive web experiences using Angular and .NET Core.
+  </p>
+  <div class="flex gap-4 animate-fade-in delay-300">
+    <a
+      href="/assets/Benadic_Resume.pdf"
+      download
+      class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition"
+    >
+      📄 Download Resume
+    </a>
+    <a
+      routerLink="/projects"
+      class="border border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg transition"
+    >
+      🚀 View Projects
     </a>
   </div>
-</div>
+</section>

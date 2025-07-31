@@ -1,34 +1,16 @@
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 10px;
-  max-width: 600px;
+/* Remove @apply from here, define animation directly */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in-out forwards;
 }
 
-.skill-card {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  padding: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.skill-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-.progress-bar {
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: #4caf50;
-  transition: width 0.4s ease-in-out;
+/* Define the keyframes for fade-in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
